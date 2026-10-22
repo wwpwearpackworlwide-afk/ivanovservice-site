@@ -75,7 +75,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 /* ---------- Появление ---------- */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .8s var(--ease); transition-delay: calc(var(--d, 0) * 90ms); }
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .45s var(--ease), transform .55s var(--ease); transition-delay: calc(var(--d, 0) * 60ms); }
+/* На телефонах контент виден сразу, остаётся только лёгкий сдвиг — без чёрных пустот при быстрой прокрутке */
+@media (hover: none) { .reveal { opacity: 1; } }
 .reveal.in { opacity: 1; transform: none; }
 
 /* ---------- Первый экран ---------- */
